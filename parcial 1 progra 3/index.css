@@ -1,4 +1,4 @@
-/* --- Variables y Configuración Global (Apunte CSS) --- */
+/* --- Variables y Configuración Global --- */
 :root {
     --bg-base: #0a0a0a;
     --bg-surface: #141414;
@@ -35,7 +35,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- Header con Flexbox y combinador de hijo directo (Apunte CSS) --- */
+/* --- Header con Flexbox y combinador de hijo directo --- */
 .header {
     background-color: var(--bg-base);
     border-bottom: 1px solid var(--border-color);
@@ -81,7 +81,7 @@ body {
     gap: 2rem;
 }
 
-/* --- Pseudoclase :hover (Apunte CSS) --- */
+/* --- Pseudoclase :hover --- */
 .nav-item {
     text-decoration: none;
     color: var(--text-muted);
@@ -225,7 +225,7 @@ body {
     margin-top: 0.3rem;
 }
 
-/* --- Sección de Formulario (Basado en README html.md) --- */
+/* --- Sección de Formulario --- */
 .contact-section {
     padding: 5rem 0;
     background-color: #0e0e0e;
@@ -263,7 +263,7 @@ body {
     font-family: var(--font-body);
 }
 
-/* Pseudoclase :focus (Apunte CSS) */
+/* Pseudoclase :focus */
 #miFormulario input:focus {
     outline: none;
     border-color: var(--accent);
