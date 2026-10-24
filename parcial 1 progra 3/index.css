@@ -1,0 +1,299 @@
+/* --- Variables y Configuración Global (Apunte CSS) --- */
+:root {
+    --bg-base: #0a0a0a;
+    --bg-surface: #141414;
+    --accent: #ff6b00;
+    --text-main: #f5f5f5;
+    --text-muted: #a3a3a3;
+    --border-color: #2a2a2a;
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* Base para rems */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Contenedor con unidades relativas --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header con Flexbox y combinador de hijo directo (Apunte CSS) --- */
+.header {
+    background-color: var(--bg-base);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.brand-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.brand-title span {
+    color: var(--accent);
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- Pseudoclase :hover (Apunte CSS) --- */
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--accent);
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 75vh;
+    background: url('assets/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    border-bottom: 3px solid var(--accent);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+}
+
+/* --- Secciones de Catálogo (Uso de Grid y Flex) --- */
+.catalog {
+    padding: 5rem 0;
+}
+
+.catalog-alt {
+    background-color: #111111;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: #fff;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.car-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pseudoclase :hover en tarjetas */
+.car-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.img-container {
+    width: 100%;
+    height: 190px;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.car-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.car-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag-noble {
+    color: #38bdf8;
+}
+
+.car-details h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 0.3rem;
+}
+
+/* --- Sección de Formulario (Basado en README html.md) --- */
+.contact-section {
+    padding: 5rem 0;
+    background-color: #0e0e0e;
+    border-top: 1px solid var(--border-color);
+}
+
+#miFormulario {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--bg-surface);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+#miFormulario label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+#miFormulario input[type="text"],
+#miFormulario input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.4rem;
+    background-color: #1c1c1c;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: #fff;
+    font-family: var(--font-body);
+}
+
+/* Pseudoclase :focus (Apunte CSS) */
+#miFormulario input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.btn-submit {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: filter 0.2s ease;
+}
+
+.btn-submit:hover {
+    filter: brightness(1.15);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--bg-base);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
